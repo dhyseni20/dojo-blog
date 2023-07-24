@@ -1,4 +1,4 @@
-const BlogList = ({ blogs, title, handleDelete }) => {
+const BlogList = ({ blogs, title }) => {
   // destruct {blogs, title}
   //   const blogs = props.blogs;
   //   const title = props.title;
@@ -10,16 +10,6 @@ const BlogList = ({ blogs, title, handleDelete }) => {
         <div className="blog-preview" key={blog.id}>
           <h2>{blog.title}</h2>
           <p>Written by {blog.author}</p>
-          <button
-            onClick={() => handleDelete(blog.id)}
-            style={{
-              color: "white",
-              backgroundColor: "#f1356d",
-              borderRadius: "8px",
-            }}
-          >
-            delete blog
-          </button>
         </div>
       ))}
     </div>
